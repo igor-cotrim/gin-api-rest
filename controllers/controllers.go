@@ -4,13 +4,11 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/igor-cotrim/gin-api-rest/models"
 )
 
 func AllStudents(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"id":   "1",
-		"name": "Igor Cotrim",
-	})
+	c.JSON(http.StatusOK, models.Students)
 }
 
 func Salutation(c *gin.Context) {
