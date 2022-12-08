@@ -1,11 +1,13 @@
 package main
 
 import (
+	"github.com/igor-cotrim/gin-api-rest/database"
 	"github.com/igor-cotrim/gin-api-rest/models"
 	"github.com/igor-cotrim/gin-api-rest/routes"
 )
 
 func main() {
+	database.ConnectToDatabase()
 	models.Students = []models.Student{
 		{
 			Name: "Igor Cotrim",
